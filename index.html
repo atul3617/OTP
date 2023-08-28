@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+</head>
+<body>
+    <script>
+            function generateOTP() { 
+          //A string variable which stores all string i.e number and alphabets
+          var string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+          let OTP = '';
+            
+          // Find the length of string
+          var len = string.length;
+          for (let i = 0; i < 6; i++ ) {
+              OTP += string[Math.ceil(Math.random() * len)];
+          }
+          return OTP;
+      }
+      confirm(`your otp is ${generateOTP()}`)
+    </script>
+</body>
+</html>
